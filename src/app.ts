@@ -77,9 +77,7 @@ function alterarProduto(req: Request, res: Response):void{
             throw new Error("Favor enviar os valores corretos");
         }
         let id:any = Number(req.params.id);
-        console.log('>>>>', produtos)
         let index = produtos.findIndex(p => p.id === id)
-        console.log('>>>>>>', index)
         if (index >= 0){
             produtos[index].id = Number(data.id);
             produtos[index].preco = Number(data.preco);
